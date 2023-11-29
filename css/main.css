@@ -1,0 +1,94 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --hue: 207;
+  --sat: 90%;
+  --lig: 61%;
+  --first-color: hsl(var(--hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--hue), var(--sat), 57%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 12%, 45%);
+  --text-color-light: hsl(var(--hue), 8%, 75%);
+  --text-color-lighten: hsl(var(--hue), 8%, 92%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #fff;
+}
+body {
+  position: relative;
+  /* background-color: #0b141e; */
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+}
+.mood {
+  position: absolute;
+  cursor: pointer;
+  left: 15px;
+  top: 15px;
+  font-size: 20px;
+}
+img {
+  width: 200px;
+  height: 200px !important;
+  object-fit: cover;
+  object-position: top;
+}
+.icon-media {
+  transition-duration: 0.5s;
+  transition-property: all;
+}
+.icon-media:hover {
+  transform: translateY(-5px);
+}
+.btn {
+  background-color: var(--first-color);
+}
+.btn:hover {
+  background-color: var(--first-color-alt);
+}
+.contact-icon {
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.contact-icon:hover {
+  background-color: rgba(221, 221, 204, 0.541);
+}
+.select {
+  background-color: #ddd;
+}
+.pro-ski {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.pro-ski:hover {
+  background-color: white;
+  font-weight: 500;
+}
+.selected {
+  cursor: default;
+  background-color: white;
+  font-weight: 500;
+}
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+}
+.card {
+  box-shadow: 1px 2px 2px #ddd;
+}
+@media (min-width: 768px) {
+  #show-pro-ski {
+    height: 482px;
+    overflow-y: scroll;
+  }
+}
